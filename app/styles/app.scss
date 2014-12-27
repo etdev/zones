@@ -3,5 +3,6 @@
 @import "vendor/bitters/base/base";
 
 html, body {
-  margin: 20px;
+  margin-left: 200px;
+  @include linear-gradient(to top, red, orange);
 }

@@ -1,8 +1,8 @@
 @import "bourbon";
 @import "bower_components/neat/app/assets/stylesheets/neat";
 @import "vendor/bitters/base/base";
+@import "a";
+@import "b";
+@import "c";
+@import "d";
 
-html, body {
-  margin-left: 200px;
-  @include linear-gradient(to top, red, orange);
-}

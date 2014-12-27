@@ -5,3 +5,5 @@ import Ember from "ember";
              console.log("Entering page D");
            }
   });
+
+export default DRoute;

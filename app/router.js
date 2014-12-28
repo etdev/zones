@@ -10,10 +10,6 @@ Router.map(function() {
   this.route("b");
   this.route("c");
   this.route("d");
-
-  this.route("navbar1");
-  this.route("navbar2");
-  this.route("navbar3");
 });
 
 export default Router;

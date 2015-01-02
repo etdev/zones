@@ -1,12 +1,17 @@
+$bg-navA: tint(red, 65%);
+$bg-navB: tint(purple, 65%);
+$bg-navC: tint(lightblue, 0%);
+$bg-navD: tint(orange, 65%);
+
 .navA{
-  background-color: lightblue;
+  background-color: $bg-navA;
 }
 .navB{
-  background-color: lightgreen;
+  background-color: $bg-navB;;
 }
 .navC{
-  background-color: purple;
+  background-color: $bg-navC;
 }
 .navD{
-  background-color: pink;
+  background-color: $bg-navD;
 }

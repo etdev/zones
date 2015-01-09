@@ -4,6 +4,9 @@ import Ember from "ember";
     page_type: 'A',
     model: function(){
              console.log("Entering page " + this.page_type);
+           },
+    toggleNav: function(){
+             console.log("Toggling navbar");
            }
    });
 

@@ -1,38 +1,55 @@
 $bg-a: #FF6B6B;
+$nav-height: 50px;
 
-body{
-  .a{
+body {
+  .a {
     background-color: $bg-a;
     font-size: 20em;
     padding: 0 0 100% 0;
   }
 
-  nav.navA{
-      height: 50px;
+  nav.navA {
+      height: $nav-height;
       min-width: 100%;
       font-size: 1.6em;
 
-      ul{
+      ul {
         position: absolute;
+        height: $nav-height;
         width: 100%;
         padding-left: 2%;
 
-        li{
+        li {
           float: left;
           position: relative;
           padding-right: 5%;
         }
       }
+
+      .nav-ham {
+        visibility: hidden;
+        position: relative;
+        right: 0px;
+        top: 0px;
+      }
   }
 
   @media screen and (max-width: 500px) {
+      .nav-link {
+        /*display: none;*/
+        width: 100%;
+      }
+      .nav-ham {
+        visibility: visible !important;
+        float: right !important;
+      }
     .navA{
-      ul{
-        height: 50px;
+      ul {
         overflow: hidden;
       }
-      li{
-        width: 100%;
+
+      li {
+        /*width: 100%;*/
       }
     }
 }

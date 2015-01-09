@@ -7,14 +7,33 @@ body{
     padding: 0 0 100% 0;
   }
 
-  nav{
-    height: 50px;
-    font-size: 1.6em;
+  nav.navA{
+      height: 50px;
+      min-width: 100%;
+      font-size: 1.6em;
 
-    ul{
+      ul{
+        position: absolute;
+        width: 100%;
+        padding-left: 2%;
+
+        li{
+          float: left;
+          position: relative;
+          padding-right: 5%;
+        }
+      }
+  }
+
+  @media screen and (max-width: 500px) {
+    .navA{
+      ul{
+        height: 50px;
+        overflow: hidden;
+      }
       li{
-        float: left;
+        width: 100%;
       }
     }
-  }
+}
 }

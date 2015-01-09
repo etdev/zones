@@ -6,4 +6,15 @@ body{
     font-size: 20em;
     padding: 0 0 100% 0;
   }
+
+  nav{
+    height: 50px;
+    font-size: 1.6em;
+
+    ul{
+      li{
+        float: left;
+      }
+    }
+  }
 }

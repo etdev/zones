@@ -1,12 +1,7 @@
-<script type="text/javascript">
-  function toggleNav(){
-    console.log("Toggling navbar");
-  }
-</script>
 <nav class="navA">
   <ul>
     <li class="nav-logo"> {{#link-to 'a'}}etdev{{/link-to}} </li>
-    <li class="nav-ham" onclick="toggleNav();"> [ham] </li>
+    <li id="nav-ham" {{ action 'toggleHam' }}>{ham}</li>
     <li class="nav-link"> {{#link-to 'a'}}Page A{{/link-to}} </li>
     <li class="nav-link"> {{#link-to 'b'}}Page B{{/link-to}} </li>
     <li class="nav-link"> {{#link-to 'c'}}Page C{{/link-to}} </li>

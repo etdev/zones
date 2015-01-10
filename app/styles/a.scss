@@ -26,7 +26,7 @@ body {
         }
       }
 
-      .nav-ham {
+      #nav-ham {
         visibility: hidden;
         position: relative;
         right: 0px;
@@ -34,23 +34,28 @@ body {
       }
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 765px) {
+    .navA{
       .nav-link {
         /*display: none;*/
-        width: 100%;
+        width: 100% !important;
+        visibility: hidden;
       }
-      .nav-ham {
+      #nav-ham {
         visibility: visible !important;
         float: right !important;
       }
-    .navA{
-      ul {
-        overflow: hidden;
-      }
+    }
+  }
 
-      li {
-        /*width: 100%;*/
+  @media screen and (min-width: 766px) {
+    .navA{
+      #nav-ham {
+        display: none;
+      }
+      .nav-link {
+        visibility: visible;
       }
     }
-}
+  }
 }

@@ -2,11 +2,10 @@ import Ember from "ember";
 
   var ARoute = Ember.Route.extend({
     page_type: 'A',
+    nav_pc: function(){
+      return document.getElementById('nav-ham');
+    },
     model: function(){
-             console.log("Entering page " + this.page_type);
-           },
-    toggleNav: function(){
-             console.log("Toggling navbar");
            }
    });
 

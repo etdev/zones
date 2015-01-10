@@ -1,9 +1,75 @@
-$bg-b: #FA6BFF;
+$bg-b: #7c3e3e;
+$nav-height: 50px;
 
-body{
-  .b{
+body {
+  .b {
     background-color: $bg-b;
-    font-size: 20em;
+    font-size: 10em;
     padding: 0 0 100% 0;
+    width: 100%;
+    overflow: hidden;
+    color: #FFF;
+  }
+
+  nav.navB {
+    text-align: center;
+    height: $nav-height;
+    min-width: 100%;
+    font-size: 1.6em;
+
+    ul {
+      position: absolute;
+      height: $nav-height;
+      width: 100%;
+
+      li {
+        display: inline-block;
+        padding-top: 0.4%;
+        position: relative;
+        padding-right: 6%;
+        a {
+          color: $bg-b;
+        }
+      }
+    }
+
+    #nav-ham {
+      visibility: hidden;
+      position: relative;
+      right: 0px;
+      top: 0px;
+    }
+    #nav-logo {
+      float: left;
+      font-weight: bold;
+      padding: 0.4% 4% 0 4%;
+    }
+  }
+
+  @media screen and (max-width: 765px) {
+    .navB{
+      .nav-link {
+        /*display: none;*/
+        width: 100% !important;
+        visibility: hidden;
+      }
+      #nav-ham {
+        visibility: visible !important;
+        float: right !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 766px) {
+    .navB{
+      #nav-ham {
+        display: none;
+      }
+      .nav-link {
+        visibility: visible;
+        display: block;
+        float: left;
+      }
+    }
   }
 }

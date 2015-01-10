@@ -1,37 +1,49 @@
-$bg-a: #FF6B6B;
+$bg-a: #3e537c;
 $nav-height: 50px;
 
 body {
   .a {
     background-color: $bg-a;
-    font-size: 20em;
+    font-size: 10em;
     padding: 0 0 100% 0;
+    width: 100%;
+    overflow: hidden;
+    color: #FFF;
   }
 
   nav.navA {
+    text-align: center;
+    height: $nav-height;
+    min-width: 100%;
+    font-size: 1.6em;
+
+    ul {
+      position: absolute;
       height: $nav-height;
-      min-width: 100%;
-      font-size: 1.6em;
+      width: 100%;
 
-      ul {
-        position: absolute;
-        height: $nav-height;
-        width: 100%;
-        padding-left: 2%;
-
-        li {
-          float: left;
-          position: relative;
-          padding-right: 5%;
+      li {
+        display: inline-block;
+        padding-top: 0.4%;
+        position: relative;
+        padding-right: 6%;
+        a {
+          color: $bg-a;
         }
       }
+    }
 
-      #nav-ham {
-        visibility: hidden;
-        position: relative;
-        right: 0px;
-        top: 0px;
-      }
+    #nav-ham {
+      visibility: hidden;
+      position: relative;
+      right: 0px;
+      top: 0px;
+    }
+    #nav-logo {
+      float: left;
+      font-weight: bold;
+      padding: 0.4% 4% 0 4%;
+    }
   }
 
   @media screen and (max-width: 765px) {
@@ -55,6 +67,7 @@ body {
       }
       .nav-link {
         visibility: visible;
+        text-align: left;
       }
     }
   }

@@ -1,9 +1,73 @@
-$bg-d: #FFB05C;
+$bg-d: #7b7c3e;
+$nav-height: 50px;
 
-body{
-  .d{
+body {
+  .d {
     background-color: $bg-d;
-    font-size: 20em;
+    font-size: 10em;
     padding: 0 0 100% 0;
+    width: 100%;
+    overflow: hidden;
+    color: #FFF;
+  }
+
+  nav.navD {
+    text-align: center;
+    height: $nav-height;
+    min-width: 100%;
+    font-size: 1.6em;
+
+    ul {
+      position: absolute;
+      height: $nav-height;
+      width: 100%;
+
+      li {
+        display: inline-block;
+        padding-top: 0.4%;
+        position: relative;
+        padding-right: 6%;
+        a {
+          color: $bg-d;
+        }
+      }
+    }
+
+    #nav-ham {
+      visibility: hidden;
+      position: relative;
+      right: 0px;
+      top: 0px;
+    }
+    #nav-logo {
+      float: left;
+      font-weight: bold;
+      padding: 0.4% 4% 0 4%;
+    }
+  }
+
+  @media screen and (max-width: 765px) {
+    .navD{
+      .nav-link {
+        /*display: none;*/
+        width: 100% !important;
+        visibility: hidden;
+      }
+      #nav-ham {
+        visibility: visible !important;
+        float: right !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 766px) {
+    .navD{
+      #nav-ham {
+        display: none;
+      }
+      .nav-link {
+        visibility: visible;
+      }
+    }
   }
 }

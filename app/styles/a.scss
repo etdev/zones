@@ -15,16 +15,19 @@ body {
     text-align: center;
     height: $nav-height;
     min-width: 100%;
-    font-size: 1.6em;
+    font-size: 1.5em;
+    line-height: 50px;
 
     ul {
       position: absolute;
       height: $nav-height;
       width: 100%;
+      li:last-child{
+        float: right;
+      }
 
       li {
         display: inline-block;
-        padding-top: 0.4%;
         position: relative;
         padding-right: 6%;
         a {
@@ -42,7 +45,7 @@ body {
     #nav-logo {
       float: left;
       font-weight: bold;
-      padding: 0.4% 4% 0 4%;
+      padding: 0 4% 0 4%;
     }
   }
 
@@ -68,8 +71,9 @@ body {
         display: none;
       }
       .nav-link {
+        position: relative;
         visibility: visible;
-        text-align: left;
+        text-align: right;
       }
     }
   }

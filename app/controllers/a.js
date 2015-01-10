@@ -9,7 +9,7 @@ var a = Ember.ObjectController.extend({
         for (var i=0; i<navLinks.length; i++){
           if (navLinks[i].style.visibility !== 'visible'){
             navLinks[i].style.visibility = 'visible';
-            navBar.style.height = '200px';
+            navBar.style.height = '250px';
           }
           else { navLinks[i].style.visibility = 'hidden';
             navBar.style.height = '50px';

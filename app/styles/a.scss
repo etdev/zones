@@ -3,23 +3,26 @@ $bg-a2: #3c5d96;
 $bg-hi: #F5F5F5;
 $nav-height: 50px;
 
-.a {
-  font-size: 10em;
+body {
   color: #FFF;
   @include radial-gradient($bg-a2, $bg-a);
+  text-align: center;
+}
+
+.main-container-a {
+  margin: 0 auto;
+  font-size: 10em;
+  max-width: 1000px;
+  text-align: left;
+  overflow: hidden;
 }
 
 nav.navA {
-  position: absolute;
-  top: 0px;
   height: $nav-height;
-  width: 100%;
   font-size: 1.2em;
   line-height: 50px;
 
   ul {
-    position: absolute;
-    top: 0px;
     height: $nav-height;
     width: 100%;
 

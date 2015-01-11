@@ -1,97 +1,106 @@
 $bg-a: #3e537c;
+$bg-a2: #3c5d96;
 $bg-hi: #F5F5F5;
 $nav-height: 50px;
 
-body {
-  .a {
-    background-color: $bg-a;
-    font-size: 10em;
-    width: 100%;
-    overflow: hidden;
-    color: #FFF;
-  }
+.a {
+  font-size: 10em;
+  overflow: hidden;
+  color: #FFF;
+  @include radial-gradient($bg-a2, $bg-a);
+}
 
-  nav.navA {
+nav.navA {
+  height: $nav-height;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 50px;
+
+  ul {
+    position: absolute;
     height: $nav-height;
-    min-width: 100%;
-    font-size: 1.2em;
-    line-height: 50px;
+    width: 100%;
 
-    ul {
-      position: absolute;
-      height: $nav-height;
-      width: 100%;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        color: $bg-a;
+        padding: 0 1.25em 0 1.25em;
+        font-weight: 500;
+        height: 50px;
+        overflow: hidden;
+      }
+      a:hover {
+        background: $bg-hi;
+      }
+    }
 
-      li:last-child{
-        float: right;
+    li:last-child {
+      float: right;
+      a {
         margin-right: 1.6em;
-      }
-
-      li {
-        display: inline-block;
-        a {
-          display: block;
-          color: $bg-a;
-          padding: 0 1.25em 0 1.25em;
-        }
-        a:hover {
-          background: $bg-hi;
-        }
-      }
-
-      #nav-logo{
-        a {
-          font-size: 1.3em;
-          margin-right: 3em;
-          margin-left: 1.6em;
-        }
-        a:hover {
-          background: #FFF;
-        }
+        padding-right: 0;
       }
     }
 
-    #nav-ham {
+    #nav-logo{
+      a {
+        font-size: 1.3em;
+        margin: 0 4.25em 0 1.6em;
+      }
+      a:hover {
+        background: #FFF;
+      }
+    }
+  }
+
+  #nav-ham {
+    visibility: hidden;
+    position: relative;
+    :hover {
+      background: #FFF;
+    }
+  }
+
+  #nav-logo {
+    font-weight: 600;
+    a {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .navA{
+    .nav-link {
+      width: 100% !important;
       visibility: hidden;
-      position: relative;
-    }
-    #nav-logo {
-      float: left;
-      font-weight: 500;
-    }
-  }
+      text-align: left;
 
-  @media screen and (max-width: 765px) {
-    .navA{
-      .nav-link {
-        width: 100% !important;
-        visibility: hidden;
-        text-align: left;
-
-        a {
-          width: 100%;
-          display: block;
-        }
-
+      a {
+        width: 100%;
+        padding-left: 2em;
+        display: block;
       }
-      #nav-ham {
-        visibility: visible !important;
-        float: right !important;
-      }
+
+    }
+    #nav-ham {
+      visibility: visible !important;
+      float: right !important;
     }
   }
+}
 
-  @media screen and (min-width: 766px) {
-    .navA{
-      height: 50px !important;
-      #nav-ham {
-        display: none;
-      }
-      .nav-link {
-        position: relative;
-        visibility: visible !important;
-        text-align: right;
-      }
+@media screen and (min-width: 766px) {
+  .navA{
+    height: 50px !important;
+    #nav-ham {
+      display: none;
+    }
+    .nav-link {
+      visibility: visible !important;
+      display: inline-block;
     }
   }
 }

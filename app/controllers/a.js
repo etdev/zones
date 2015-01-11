@@ -7,12 +7,13 @@ var a = Ember.ObjectController.extend({
         var navLinks = document.querySelectorAll(".nav-link");
         var navBar = document.querySelector("nav.navA");
         for (var i=0; i<navLinks.length; i++){
-          if (navLinks[i].style.visibility !== 'visible'){
-            navLinks[i].style.visibility = 'visible';
+          if (navLinks[i].style.display !== 'block'){
+            navLinks[i].style.display = 'block';
             navBar.style.height = '250px';
           }
-          else { navLinks[i].style.visibility = 'hidden';
+          else { navLinks[i].style.display = 'block';
             navBar.style.height = '50px';
+            navLinks[i].style.display = 'none';
           }
         }
       }

@@ -5,12 +5,13 @@ $nav-height: 50px;
 
 .a {
   font-size: 10em;
-  overflow: hidden;
   color: #FFF;
   @include radial-gradient($bg-a2, $bg-a);
 }
 
 nav.navA {
+  position: absolute;
+  top: 0px;
   height: $nav-height;
   width: 100%;
   font-size: 1.2em;
@@ -18,18 +19,20 @@ nav.navA {
 
   ul {
     position: absolute;
+    top: 0px;
     height: $nav-height;
     width: 100%;
 
     li {
       display: inline-block;
+      float: left;
+
       a {
         display: block;
         color: $bg-a;
         padding: 0 1.25em 0 1.25em;
         font-weight: 500;
         height: 50px;
-        overflow: hidden;
       }
       a:hover {
         background: $bg-hi;
@@ -39,8 +42,9 @@ nav.navA {
     li:last-child {
       float: right;
       a {
-        margin-right: 1.6em;
-        padding-right: 0;
+        text-align: middle;
+        display: block;
+        padding-right: 1.6em;
       }
     }
 

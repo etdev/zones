@@ -1,18 +1,17 @@
 $bg-a: #3e537c;
+$bg-hi: #F5F5F5;
 $nav-height: 50px;
 
 body {
   .a {
     background-color: $bg-a;
     font-size: 10em;
-    padding: 0 0 100% 0;
     width: 100%;
     overflow: hidden;
     color: #FFF;
   }
 
   nav.navA {
-    text-align: center;
     height: $nav-height;
     min-width: 100%;
     font-size: 1.5em;
@@ -22,16 +21,25 @@ body {
       position: absolute;
       height: $nav-height;
       width: 100%;
+
       li:last-child{
         float: right;
       }
 
       li {
         display: inline-block;
-        position: relative;
-        padding-right: 6%;
         a {
+          display: block;
           color: $bg-a;
+        }
+        a:hover {
+          background: $bg-hi;
+        }
+      }
+
+      #nav-logo{
+        a:hover {
+          background: #FFF;
         }
       }
     }
@@ -39,22 +47,25 @@ body {
     #nav-ham {
       visibility: hidden;
       position: relative;
-      right: 0px;
-      top: 0px;
     }
     #nav-logo {
       float: left;
-      font-weight: bold;
-      padding: 0 4% 0 4%;
+      font-weight: 500;
     }
   }
 
   @media screen and (max-width: 765px) {
     .navA{
       .nav-link {
-        /*display: none;*/
         width: 100% !important;
         visibility: hidden;
+        text-align: left;
+
+        a {
+          width: 100%;
+          display: block;
+        }
+
       }
       #nav-ham {
         visibility: visible !important;
@@ -66,13 +77,12 @@ body {
   @media screen and (min-width: 766px) {
     .navA{
       height: 50px !important;
-
       #nav-ham {
         display: none;
       }
       .nav-link {
         position: relative;
-        visibility: visible;
+        visibility: visible !important;
         text-align: right;
       }
     }

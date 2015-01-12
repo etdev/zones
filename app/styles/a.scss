@@ -64,19 +64,33 @@ nav.navA {
     }
   }
 
-  #nav-ham {
-    visibility: hidden;
-    position: relative;
-    :hover {
-      background: #FFF;
-    }
-  }
-
   #nav-logo {
     font-weight: 600;
     a {
       padding: 0;
     }
+  }
+
+  #nav-ham {
+    visibility: hidden;
+    position: relative;
+    width: 60px;
+    height: 50px;
+    display: block;
+    margin-right: 20px;
+    margin-top: 5px;
+
+    :hover {
+      background: #F4F4F4;
+      border-radius: 5px;
+    }
+  }
+
+  #ham-btn {
+    display: block;
+    width: 60px;
+    height: 40px;
+    padding: 10px 15px 10px 15px;
   }
 }
 
@@ -103,6 +117,7 @@ nav.navA {
     padding: 0;
 
   }
+
   .navA {
     .nav-link {
       width: 100% !important;
@@ -116,10 +131,15 @@ nav.navA {
       }
 
     }
+
     #nav-ham {
       visibility: visible !important;
       float: right !important;
     }
+  }
+
+  .content-prim {
+    height: 442px;
   }
 }
 
@@ -129,6 +149,7 @@ nav.navA {
     #nav-ham {
       display: none;
     }
+
     .nav-link {
       display: block !important;
     }

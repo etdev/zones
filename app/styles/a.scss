@@ -1,18 +1,17 @@
 $bg-a: #3e537c;
-$bg-a2: #3c5d96;
+$bg-a2: #3d5d96;
 $bg-hi: #F5F5F5;
 $nav-height: 50px;
 
 body {
   color: #FFF;
-  @include radial-gradient($bg-a2, $bg-a);
   text-align: center;
 }
 
-.main-container-a {
+.content-inner-a {
   margin: 0 auto;
-  font-size: 10em;
-  max-width: 1000px;
+  font-size: 3.8em;
+  max-width: 1138px;
   text-align: left;
   overflow: hidden;
 }
@@ -24,7 +23,7 @@ nav.navA {
   line-height: 50px;
 
   ul {
-    max-width: 50em;
+    max-width: 1138px;
     margin: 0 auto;
     height: $nav-height;
     /*width: 100%;*/
@@ -80,6 +79,20 @@ nav.navA {
     }
   }
 }
+
+.content-prim {
+  height: 553px;
+  @include radial-gradient($bg-a2, $bg-a);
+  color: #FFF;
+}
+
+.content-sec {
+  color: $bg-a;
+  background: #FFF;
+  height: 1538px;
+}
+
+/* Media queries to make the site responsive */
 
 @media screen and (max-width: 765px) {
 

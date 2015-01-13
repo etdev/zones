@@ -1,0 +1,14 @@
+<nav class="navA">
+  <ul>
+    <li id="nav-logo"> {{#link-to 'a'}}etdev{{/link-to}} </li>
+    <li id="nav-ham" {{ action 'toggleHam' }}>
+      <a id="ham-link" href="#">
+        <img id="ham-btn" src="ham.svg"/>
+      </a>
+    </li>
+    <li class="nav-link"> {{#link-to 'a'}}About me{{/link-to}} </li>
+    <li class="nav-link"> {{#link-to 'b'}}Projects{{/link-to}} </li>
+    <li class="nav-link"> {{#link-to 'c'}}Page C{{/link-to}} </li>
+    <li class="nav-link"> {{#link-to 'd'}}blog{{/link-to}} </li>
+  </ul>
+</nav>

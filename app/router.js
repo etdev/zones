@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route("a");
+  this.route("portfolio");
   this.route("b");
   this.route("c");
   this.route("d");

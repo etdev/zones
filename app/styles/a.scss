@@ -10,10 +10,15 @@ body {
 
 .content-inner-a {
   margin: 0 auto;
-  font-size: 3.8em;
+  padding-top: 75px;
+  font-size: 2em;
   max-width: 1138px;
-  text-align: left;
+  text-align: center;
   overflow: hidden;
+}
+
+.content-prim {
+  padding-top: 140px;
 }
 
 nav.navA {

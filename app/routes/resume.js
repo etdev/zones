@@ -1,10 +1,10 @@
 import Ember from "ember";
 
-  var CRoute = Ember.Route.extend({
-    page_type: 'C',
+  var ResumeRoute = Ember.Route.extend({
+    page_name: 'Resume',
     model: function(){
              console.log("Entering page " + this.page_type);
            }
   });
 
-export default CRoute;
+export default ResumeRoute;

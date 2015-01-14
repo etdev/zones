@@ -1,7 +1,7 @@
 import Ember from "ember";
 
   var IndexController = Ember.ObjectController.extend({
-    title: 'ZC - Index'
+    title: 'Etdev - Portfolio'
   });
 
 export default IndexController;

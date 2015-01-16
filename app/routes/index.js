@@ -1,6 +1,9 @@
 import Ember from "ember";
 
   var IndexRoute = Ember.Route.extend({
+    beforeModel: function(){
+      this.transitionTo('portfolio');
+    },
     setupController: function(controller){
       console.log("Running Index setupController");
       document.title = controller.get('title');

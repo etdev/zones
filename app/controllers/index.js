@@ -1,7 +1,7 @@
 import Ember from "ember";
 
   var IndexController = Ember.ObjectController.extend({
-    title: 'Etdev - Portfolio'
+    title: 'Eric Turner'
   });
 
 export default IndexController;
